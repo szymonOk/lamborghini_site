@@ -73,8 +73,9 @@ body {
   font-family: 'Revalia', cursive;
   margin-bottom: 0.5em;
   font-size: 3.2rem;
-  color: #b3dfdb;
+  color: #ce7320;
   letter-spacing: 3px;
+  line-height: 160%;
 }
 
 .header__text p {
@@ -84,7 +85,7 @@ body {
 
 .header__img {
   position: relative;
-  background-image: url("../img/header_small_alternative.jpg");
+  background-image: url("../img/header_small_alter.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

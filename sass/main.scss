@@ -52,8 +52,9 @@ body {
 			font-family: 'Revalia', cursive;
 			margin-bottom: 0.5em;
 			font-size: 3.2rem;
-			color: $diamond;
+			color: $orange;
 			letter-spacing: 3px;
+			line-height: 160%;
 		}
 
 		p {
@@ -64,7 +65,7 @@ body {
 
 	&__img {
 		position: relative;
-		background-image: url('../img/header_small_alternative.jpg');
+		background-image: url('../img/header_small_alter.jpg');
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
@@ -139,7 +140,7 @@ body {
 		padding: 0.5em;
 
 		&:hover {
-			color: $darkdiamond;
+			color: $darkorange;
 		}
 
 		&::before {
@@ -149,7 +150,7 @@ body {
 			left: 0;
 			width: 100%;
 			height: 100%;
-			border: 2px solid $darkdiamond;
+			border: 2px solid $darkorange;
 			opacity: 0;
 		}
 
