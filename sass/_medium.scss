@@ -1,10 +1,12 @@
 @media (min-width: 768px) {
+	// HEADER
 	.header {
 		&__img {
 			background-image: url('../img/header_large_alter.jpg');
 		}
 	}
 
+	// CARDS SECTION
 	.cards {
 		&__box {
 			padding: 10em 2em;

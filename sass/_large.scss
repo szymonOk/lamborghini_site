@@ -1,4 +1,13 @@
 @media (min-width: 992px) {
+	.section-heading {
+		font-size: 4rem;
+
+		&::before {
+			width: 93px;
+			height: 4px;
+		}
+	}
+
 	// HEADER
 	.header {
 		grid-template-rows: auto 1fr 1fr;
@@ -101,6 +110,29 @@
 
 			&:hover::before {
 				animation: pulse 1s;
+			}
+		}
+	}
+
+	// CONFIGURATION SECTION
+	.configuration {
+		&__box {
+			&__item {
+				margin-bottom: 5em;
+			}
+
+			&-title {
+				font-size: 3.6rem;
+			}
+
+			&-text {
+				font-size: 2rem;
+			}
+
+			&-link {
+				a {
+					font-size: 2.3rem;
+				}
 			}
 		}
 	}

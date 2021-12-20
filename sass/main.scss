@@ -15,6 +15,30 @@ body {
 	width: 100%;
 }
 
+.section-heading {
+	position: relative;
+	margin: 0 auto 2em;
+	color: $orange;
+	font-size: 3rem;
+	font-weight: 200;
+	width: fit-content;
+	letter-spacing: 1px;
+
+	&::before {
+		content: '';
+		position: absolute;
+		bottom: -0.1em;
+		left: 0;
+		width: 68px;
+		height: 2px;
+		background-color: $orange;
+	}
+
+	span {
+		font-weight: 900;
+	}
+}
+
 // HEADER
 .header {
 	display: grid;
@@ -146,13 +170,14 @@ body {
 	&__link {
 		position: relative;
 		display: inline-block;
-		font-size: 2.4rem;
+		font-size: 2.6rem;
+		letter-spacing: 2px;
 		color: $darker;
 		text-decoration: none;
 		text-transform: uppercase;
 		margin: 0.3em;
 		padding: 1em;
-		transition: color 0.5s;
+		transition: color 0.3s;
 
 		&:hover {
 			color: $darkorange;
@@ -244,6 +269,104 @@ body {
 
 // CONFIGURATION SECTION
 .configuration {
+	position: relative;
+	padding: 6em 2em;
+	display: grid;
+	grid-template-areas:
+		'title'
+		'box'
+		'box';
+
+	&__title {
+		grid-area: title;
+	}
+
+	&__box {
+		grid-area: box;
+
+		&-item {
+			margin-bottom: 4em;
+		}
+
+		&-title {
+			font-weight: 200;
+			font-size: 2.8rem;
+			color: $orange;
+			margin-bottom: 0.5em;
+		}
+
+		&-img {
+			margin-bottom: 1em;
+			overflow: hidden;
+
+			&-item {
+				width: 100%;
+				object-fit: cover;
+				transition: transform 0.2s;
+			}
+
+			&:hover &-item {
+				transform: scale(1.04);
+			}
+		}
+
+		&-text {
+			line-height: 150%;
+			margin-bottom: 1em;
+			font-size: 1.5rem;
+		}
+
+		&-link {
+			text-align: right;
+
+			a {
+				color: $orange;
+				font-size: 1.8rem;
+				text-decoration: none;
+				transition: 0.2s;
+				font-weight: 600;
+				padding: 0.8em;
+				margin-right: -0.8em;
+
+				&:hover {
+					color: $darkorange;
+				}
+			}
+		}
+	}
+
+	&__bg-icon {
+		display: none;
+		z-index: -5;
+
+		&--one {
+			top: 18%;
+			left: 6%;
+			width: 20%;
+			animation: rotate-right 130s infinite;
+		}
+
+		&--two {
+			bottom: 12%;
+			left: 18%;
+			width: 28%;
+			animation: rotate-left 154s infinite;
+		}
+
+		&--three {
+			left: -12%;
+			top: 55%;
+			width: 25%;
+			animation: rotate-right 150s infinite;
+		}
+
+		&--four {
+			top: 32%;
+			left: 28%;
+			width: 40%;
+			animation: rotate-left 110s infinite;
+		}
+	}
 }
 
 @import './small';

@@ -1,0 +1,37 @@
+@media (min-width: 576px) {
+	// CONFIGURATION SECTION
+	.configuration {
+		padding: 10em 2em;
+		grid-template-areas:
+			'title box'
+			'title box'
+			'title box';
+
+		&__title {
+			padding-right: 2em;
+		}
+
+		&__box {
+			display: grid;
+			justify-content: end;
+
+			&-item {
+				max-width: 500px;
+			}
+
+			&-img {
+				max-width: 500px;
+			}
+
+			&-text {
+				font-size: 1.6rem;
+			}
+		}
+
+		&__bg-icon {
+			display: block;
+			position: absolute;
+			opacity: 0.05;
+		}
+	}
+}
