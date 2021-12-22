@@ -386,6 +386,7 @@ body {
 		border-radius: 10px;
 		background-color: $dark;
 		transition: background 0.2s, border 0.2s;
+		cursor: pointer;
 
 		&:hover {
 			border: 1px solid $orange;
@@ -396,27 +397,109 @@ body {
 		margin: 1em 0;
 
 		&-icon {
+			margin-bottom: 0;
 			img {
 				width: 35px;
 			}
 		}
 
 		&-title {
-			margin-top: -0.2em;
+			position: relative;
+			display: inline-block;
 			font-size: 2rem;
+			letter-spacing: 1px;
+			text-align: left;
+
+			&::before {
+				content: '';
+				position: absolute;
+				bottom: -3px;
+				left: 0;
+				width: 40px;
+				height: 3px;
+				background-color: $orange;
+			}
 		}
 
 		> p:first-of-type {
 			font-size: 1.6rem;
-			font-weight: bold;
+			font-weight: 600;
 			margin-bottom: 0.2em;
 			letter-spacing: 1px;
 		}
 
 		> p:last-of-type {
+			font-weight: 200;
 			font-size: 1.5rem;
 		}
 	}
+}
+
+// NEWSLETTER
+.newsletter {
+	padding: 8em 2em;
+	background-color: $blue;
+	text-align: center;
+
+	&__text {
+		font-size: 3.6rem;
+		font-weight: 200;
+		padding: 1em;
+		margin-bottom: 0.4em;
+	}
+
+	&__input {
+		width: 100%;
+		padding: 0.6em;
+		font-size: 1.8rem;
+		margin-bottom: 1.2em;
+		border: 2px solid transparent;
+
+		&:focus {
+			outline: none;
+			border: 2px solid $orange;
+		}
+	}
+
+	&__btn {
+		background: none;
+		color: $orange;
+		padding: 0.5em 1em;
+		font-size: 1.8rem;
+		letter-spacing: 1.5px;
+		border: 2px solid $orange;
+		transition: background 0.3s, color 0.3s;
+		cursor: pointer;
+
+		&:hover {
+			background-color: $orange;
+			color: $blue;
+		}
+	}
+}
+
+// GALLERY
+.gallery {
+	display: grid;
+	grid-template-columns: 1fr;
+
+	&__img {
+		height: 300px;
+		width: 100%;
+		object-fit: cover;
+
+		&:nth-child(odd) {
+			display: none;
+		}
+	}
+}
+
+// FOOTER
+.footer {
+	padding: 3em 1em;
+	text-align: center;
+	border-top: 1.2px solid $darker;
+	// rgba(255, 255, 255, 0.2)
 }
 
 // HEADING IN COLOR SECTION
