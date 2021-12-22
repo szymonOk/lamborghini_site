@@ -369,6 +369,65 @@ body {
 	}
 }
 
+// COLOR SECTION
+.color {
+	padding: 6em 2em;
+	background-color: $darker;
+
+	.section-heading {
+		margin: 0 0 2em;
+	}
+
+	&__box {
+		text-align: center;
+		margin: 1em 0;
+		padding: 1.5em;
+		border: 1px solid transparent;
+		border-radius: 10px;
+		background-color: $dark;
+		transition: background 0.2s, border 0.2s;
+
+		&:hover {
+			border: 1px solid $orange;
+		}
+	}
+
+	&__item {
+		margin: 1em 0;
+
+		&-icon {
+			img {
+				width: 35px;
+			}
+		}
+
+		&-title {
+			margin-top: -0.2em;
+			font-size: 2rem;
+		}
+
+		> p:first-of-type {
+			font-size: 1.6rem;
+			font-weight: bold;
+			margin-bottom: 0.2em;
+			letter-spacing: 1px;
+		}
+
+		> p:last-of-type {
+			font-size: 1.5rem;
+		}
+	}
+}
+
+// HEADING IN COLOR SECTION
+@media (min-width: 394px) {
+	.color {
+		.section-heading {
+			margin: 0 auto 2em;
+		}
+	}
+}
+
 @import './small';
 @import './medium';
 @import './large';
