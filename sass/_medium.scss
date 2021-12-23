@@ -10,7 +10,9 @@
 	.cards {
 		&__box {
 			padding: 10em 2em;
+			grid-template-columns: repeat(9, 1fr);
 			grid-template-rows: 1fr;
+			gap: 2em;
 		}
 
 		&__card {
@@ -86,6 +88,7 @@
 
 	// NEWSLETTER
 	.newsletter {
+		padding: 12em 2em;
 		&__wrapper {
 			display: grid;
 			grid-template-columns: 1fr 1fr;

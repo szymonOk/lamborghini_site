@@ -1,7 +1,6 @@
 @media (min-width: 576px) {
 	// CONFIGURATION SECTION
 	.configuration {
-		padding: 10em 2em;
 		grid-template-areas:
 			'title box'
 			'title box'
@@ -35,6 +34,12 @@
 		}
 	}
 
+	// NEWSLETTER
+	.newsletter {
+		padding: 10em 2em;
+	}
+
+	// GALLERY
 	.gallery {
 		grid-template-columns: 1fr 1fr;
 	}

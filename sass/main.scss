@@ -1,6 +1,7 @@
 @import './reset';
 @import './animations';
 @import './colors';
+@import './components';
 
 body {
 	font-family: 'Raleway', sans-serif;
@@ -151,12 +152,12 @@ body {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		background-color: $white;
+		background-color: $dark;
 		transform: translateX(-102%);
 		transition: transform 0.3s;
 		z-index: 10;
-		// position: fixed;
-		// overflow-y: hidden;
+		height: 100vh;
+		overflow: hidden;
 
 		&--active {
 			transform: translateX(0);
@@ -187,21 +188,21 @@ body {
 
 // CARDS SECTION
 .cards {
+	padding: 2em 0;
 	background-color: $darker;
 	overflow: hidden;
 
 	&__box {
 		display: grid;
-		grid-template-columns: repeat(9, 1fr);
+		grid-template-columns: 1fr;
 		grid-template-rows: repeat(3, 1fr);
-		gap: 2em;
 		padding: 4em 2em;
 	}
 
 	&__card {
 		position: relative;
-		display: grid;
-		justify-items: center;
+		// display: grid;
+		// justify-items: center;
 		margin: 0.4em 0;
 		padding: 2.4em;
 		text-align: center;
@@ -270,7 +271,6 @@ body {
 // CONFIGURATION SECTION
 .configuration {
 	position: relative;
-	padding: 6em 2em;
 	display: grid;
 	grid-template-areas:
 		'title'
@@ -371,7 +371,6 @@ body {
 
 // COLOR SECTION
 .color {
-	padding: 6em 2em;
 	background-color: $darker;
 
 	.section-heading {
@@ -496,8 +495,6 @@ body {
 
 // CONTACT SECTION
 .contact {
-	padding: 6em 2em;
-
 	&__form {
 		display: grid;
 		grid-template-columns: repeat(6, 1fr);
@@ -554,6 +551,7 @@ body {
 			font-size: 1.6rem;
 			padding: 0.5em 1em;
 			cursor: pointer;
+			transition: background 0.3s, color 0.3s;
 
 			&:focus,
 			&:hover {

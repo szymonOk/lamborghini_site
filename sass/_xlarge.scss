@@ -10,12 +10,14 @@
 		}
 	}
 
+	// NAV
 	.nav {
 		&__link {
 			font-size: 2.4rem;
 		}
 	}
 
+	// GALLERY
 	.gallery {
 		grid-template-columns: repeat(8, 1fr);
 	}
