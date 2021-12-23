@@ -37,6 +37,14 @@
 	// NEWSLETTER
 	.newsletter {
 		padding: 10em 2em;
+
+		&__icon {
+			&-second {
+				bottom: -40px;
+				right: 23%;
+				width: 175px;
+			}
+		}
 	}
 
 	// GALLERY

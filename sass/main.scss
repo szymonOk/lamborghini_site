@@ -126,7 +126,7 @@ body {
 
 // HAMBURGER
 .hamburger {
-	position: absolute;
+	position: fixed;
 	top: 3em;
 	left: 1em;
 	transform: translateY(-50%);
@@ -152,12 +152,11 @@ body {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		background-color: $dark;
+		background-color: $white;
 		transform: translateX(-102%);
 		transition: transform 0.3s;
 		z-index: 10;
-		height: 100vh;
-		overflow: hidden;
+		position: fixed;
 
 		&--active {
 			transform: translateX(0);
@@ -436,9 +435,11 @@ body {
 
 // NEWSLETTER
 .newsletter {
+	position: relative;
 	padding: 8em 2em;
 	background-color: $blue;
 	text-align: center;
+	overflow: hidden;
 
 	&__text {
 		font-size: 3.6rem;
@@ -473,6 +474,27 @@ body {
 		&:hover {
 			background-color: $orange;
 			color: $blue;
+		}
+	}
+
+	&__icon {
+		&-first,
+		&-second {
+			position: absolute;
+		}
+
+		&-first {
+			top: -40px;
+			left: 16%;
+			width: 160px;
+			animation: rotate-left 100s linear infinite;
+		}
+
+		&-second {
+			bottom: -45px;
+			right: -12%;
+			width: 175px;
+			animation: rotate-right 90s linear infinite;
 		}
 	}
 }

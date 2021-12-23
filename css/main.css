@@ -225,7 +225,7 @@ body {
 }
 
 .hamburger {
-  position: absolute;
+  position: fixed;
   top: 3em;
   left: 1em;
   -webkit-transform: translateY(-50%);
@@ -257,7 +257,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #232323;
+  background-color: #fff;
   -webkit-transform: translateX(-102%);
           transform: translateX(-102%);
   -webkit-transition: -webkit-transform 0.3s;
@@ -265,8 +265,7 @@ body {
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s;
   z-index: 10;
-  height: 100vh;
-  overflow: hidden;
+  position: fixed;
 }
 
 .nav-mobile--active {
@@ -566,9 +565,11 @@ body {
 }
 
 .newsletter {
+  position: relative;
   padding: 8em 2em;
   background-color: #305fa7;
   text-align: center;
+  overflow: hidden;
 }
 
 .newsletter__text {
@@ -606,6 +607,26 @@ body {
 .newsletter__btn:hover {
   background-color: #da791f;
   color: #305fa7;
+}
+
+.newsletter__icon-first, .newsletter__icon-second {
+  position: absolute;
+}
+
+.newsletter__icon-first {
+  top: -40px;
+  left: 16%;
+  width: 160px;
+  -webkit-animation: rotate-left 100s linear infinite;
+          animation: rotate-left 100s linear infinite;
+}
+
+.newsletter__icon-second {
+  bottom: -45px;
+  right: -12%;
+  width: 175px;
+  -webkit-animation: rotate-right 90s linear infinite;
+          animation: rotate-right 90s linear infinite;
 }
 
 .gallery {
@@ -744,6 +765,11 @@ body {
   }
   .newsletter {
     padding: 10em 2em;
+  }
+  .newsletter__icon-second {
+    bottom: -40px;
+    right: 23%;
+    width: 175px;
   }
   .gallery {
     -ms-grid-columns: 1fr 1fr;
